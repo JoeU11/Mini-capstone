@@ -1,0 +1,5 @@
+GET HTTP://localhost:3000/soccer-ball.json
+
+
+###
+GET HTTP://localhost:3000/all-products.json
