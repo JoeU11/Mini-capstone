@@ -1,5 +1,16 @@
-GET HTTP://localhost:3000/index.json
+GET HTTP://localhost:3000/products
 
 
 ###
-GET HTTP://localhost:3000/show/1.json
+GET HTTP://localhost:3000/products/1
+
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Shinguards",
+  "price": 20,
+  "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
+}
