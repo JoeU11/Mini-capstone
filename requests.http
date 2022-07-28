@@ -2,7 +2,7 @@ GET HTTP://localhost:3000/products
 
 
 ###
-GET HTTP://localhost:3000/products/1
+GET HTTP://localhost:3000/products/3
 
 
 ###
@@ -14,3 +14,7 @@ Content-Type: application/json
   "price": 20,
   "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
 }
+
+
+###
+PATCH http://localhost:3000/products/6
