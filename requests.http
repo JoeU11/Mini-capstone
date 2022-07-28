@@ -21,7 +21,9 @@ PATCH http://localhost:3000/products/7
 Content-Type: application/json
 
 {
-  "price": 15
+  "image_url": "https://cdn.shopify.com/s/files/1/0367/6903/8381/products/SX5728-100-PHCFH001_875x.jpg?v=1588263965"
 }
 
 
+###
+DELETE http://localhost:3000/products/8
