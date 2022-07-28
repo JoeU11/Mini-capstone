@@ -17,4 +17,11 @@ Content-Type: application/json
 
 
 ###
-PATCH http://localhost:3000/products/6
+PATCH http://localhost:3000/products/7
+Content-Type: application/json
+
+{
+  "price": 15
+}
+
+
