@@ -1,10 +1,11 @@
 class ProductsController < ApplicationController
-  def soccer_ball
-    product = Product.find_by({name: "Soccer Ball"})
-    render json: product
+  def index
+    products = Product.all
+    render json: products.as_json
   end
 
-  def all_products
-    render json: Product.all
+  def show
+    product = Product.find_by(id: 1)
+    render json: product.as_json
   end
 end

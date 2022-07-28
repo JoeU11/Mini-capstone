@@ -1,5 +1,5 @@
-GET HTTP://localhost:3000/soccer-ball.json
+GET HTTP://localhost:3000/index.json
 
 
 ###
-GET HTTP://localhost:3000/all-products.json
+GET HTTP://localhost:3000/show/1.json
