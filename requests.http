@@ -1,3 +1,5 @@
+#just for testing locally. Front end replaces entirely. 
+
 GET HTTP://localhost:3000/products
 
 
@@ -12,6 +14,7 @@ Content-Type: application/json
 {
   "name": "Shinguards",
   "price": 20,
+  "image_url": "test_url",
   "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
 }
 
@@ -21,9 +24,12 @@ PATCH http://localhost:3000/products/7
 Content-Type: application/json
 
 {
-  "image_url": "https://cdn.shopify.com/s/files/1/0367/6903/8381/products/SX5728-100-PHCFH001_875x.jpg?v=1588263965"
+  "name": "Shinguards",
+  "price": 20,
+  "image_url": "test_url",
+  "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
 }
 
 
 ###
-DELETE http://localhost:3000/products/8
+DELETE http://localhost:3000/products/17
