@@ -30,13 +30,13 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# add jb gem for render template
+# add jb gem for render template. https://github.com/amatsuda/jb
 gem 'jb'
 
-# Backup database in seeds file
+# Backup database in seeds file. https://github.com/rroblak/seed_dump
 gem 'seed_dump'
 
-# Allows use with Actualize front end
+# Allows use with Actualize front end. https://github.com/cyu/rack-cors
 gem 'rack-cors'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
