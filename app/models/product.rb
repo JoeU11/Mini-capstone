@@ -9,7 +9,7 @@ class Product < ApplicationRecord
     # else
     #   false
     # end
-    price <=10 
+    price <=10
   end
 
   def tax
