@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # products
   get "/products" => "products#index"
 
   get "/products/:id" => "products#show"
@@ -12,4 +14,15 @@ Rails.application.routes.draw do
   patch "/products/:id" => "products#update"
 
   delete "/products/:id" => "products#destroy"
+
+  # Suppliers
+  get "/suppliers" => "suppliers#index"
+
+  get "/suppliers/:id" => "suppliers#show"
+
+  post "/suppliers" => "suppliers#create"
+
+  patch "/suppliers/:id" => "suppliers#update"
+
+  delete "/suppliers/:id" => "suppliers#destroy"
 end

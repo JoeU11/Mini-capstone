@@ -12,7 +12,7 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Shinguards",
+  "name": "Shinguards_1",
   "price": 20,
   "image_url": "test_url",
   "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
@@ -24,7 +24,7 @@ PATCH http://localhost:3000/products/16.json
 Content-Type: application/json
 
 {
-  "name": "Shinguards",
+  "name": "Shinguards_1",
   "price": 20,
   "image_url": "test_url",
   "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
@@ -32,4 +32,35 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/products/17.json
+DELETE http://localhost:3000/supplier/1.json
+
+# PRODUCTS
+
+###
+GET HTTP://localhost:3000/suppliers.json
+
+
+###
+GET HTTP://localhost:3000/suppliers/2.json
+
+
+###
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+
+###
+PATCH http://localhost:3000/suppliers/2.json
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+
+###
+DELETE http://localhost:3000/suppliers/3.json
