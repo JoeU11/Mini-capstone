@@ -11,8 +11,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(name: params[:name], price: params[:price], image_url: params[:image_url], description: params[:description])
-    if @product.save 
+    @product = Product.new(name: params[:name], price: params[:price], description: params[:description], supplier_id: params[:supplier_id])
+    if @product.save
+      if params[:image_url]
+        image = Image.new(url: params[:image_url], product_id: @product.id) #to add multiple at a time, pass array of image urls instead of a single string
+        image.save
+      end 
       render template: "products/show"
     else
       render json: @product.errors.full_messages, status: :unprocessable_entity

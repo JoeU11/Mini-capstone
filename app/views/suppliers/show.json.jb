@@ -1,0 +1,8 @@
+{
+  id: @supplier.id,
+  name: @supplier.name,
+  email: @supplier.email,
+  phone_number: @supplier.phone_number,
+  created_at: @supplier.created_at,
+  updated_at: @supplier.updated_at
+}

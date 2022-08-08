@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :images
+
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :price, presence: true

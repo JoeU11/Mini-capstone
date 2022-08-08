@@ -4,7 +4,7 @@ GET HTTP://localhost:3000/products.json
 
 
 ###
-GET HTTP://localhost:3000/products/3.json
+GET HTTP://localhost:3000/products/22.json
 
 
 ###
@@ -15,7 +15,8 @@ Content-Type: application/json
   "name": "Shinguards_1",
   "price": 20,
   "image_url": "test_url",
-  "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
+  "description": "Protection for your shins. Required by refs everywhere.. unfortunately",
+  "supplier_id": 2
 }
 
 
@@ -49,18 +50,53 @@ POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
 {
-  "name": ""
+  "name": "",
+  "email": "",
+  "phone_number": "234"
 }
 
 
 ###
-PATCH http://localhost:3000/suppliers/2.json
+PATCH http://localhost:3000/suppliers/4.json
 Content-Type: application/json
 
 {
-  "name": ""
+  "name": "Puma",
+  "email": "puma@puma.com",
+  "phone_number": "1092834756"
 }
 
 
 ###
 DELETE http://localhost:3000/suppliers/3.json
+
+
+###
+# User Add Image:
+post http://localhost:3000/images.json
+Content-Type: application/json
+
+{
+  "url": "",
+  "product_id": ""
+}
+
+### Sign up (create new user)
+post http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test_user2",
+  "email": "test_email2",
+  "password": "password",
+  "password_confirmation": "password" 
+}
+
+### Generate jwt (sign in)
+post http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test_email2",
+  "password": "password"
+}
