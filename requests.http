@@ -45,7 +45,7 @@ GET HTTP://localhost:3000/suppliers.json
 GET HTTP://localhost:3000/suppliers/2.json
 
 
-###
+### add supplier
 POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
@@ -56,7 +56,7 @@ Content-Type: application/json
 }
 
 
-###
+### updade suppliers
 PATCH http://localhost:3000/suppliers/4.json
 Content-Type: application/json
 
@@ -108,20 +108,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjAwNjM0M
 
 ### Create order
 post http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjAwNzE3MzR9.bSHSP0lm_qTSxTxrIHIV35MXjzoFlA8tf_LOlcLpdMY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
 Content-Type: application/json
 
 {
-  "product_id": 11,
-  "quantity": 2
+  "product_id": 3,
+  "quantity": 3
 }
 
 
 ### Orders Index
 get http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjAwNzE3MzR9.bSHSP0lm_qTSxTxrIHIV35MXjzoFlA8tf_LOlcLpdMY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
 
 
 ### Orders Show
-get http://localhost:3000/orders/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAwNzMwNTZ9.A4L6R7dQWOHYETyAR7Tqf-bGaybtwUq8wUHV2q-etHU
+get http://localhost:3000/orders/5.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
