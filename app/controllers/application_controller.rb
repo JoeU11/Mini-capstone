@@ -19,7 +19,13 @@ class ApplicationController < ActionController::API
 
   def authenticate_user
     unless current_user
-      render json: {message: "you must be logged in to use this feature"}, status: :unauthorized
+      render json: {}, status: :unauthorized
+    end
+  end
+
+  def authenticate_admin
+    unless current_user && current_user.admin > 0
+      render json: {}, status: :unauthorized
     end
   end
 end

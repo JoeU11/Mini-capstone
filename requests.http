@@ -1,4 +1,8 @@
 #just for testing locally. Front end replaces entirely. 
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjAxNTY2Mjd9.A7amLWzYCssJBz_wCtCaTIoZX-C6WTrOcMj9OVIpbis
+@user = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTgxOTl9.AEA0eSFdAq22q6pukr9bfc_-zigK0CBgy6fFMCUipqY
+
+
 
 GET HTTP://localhost:3000/products.json
 
@@ -10,9 +14,10 @@ GET HTTP://localhost:3000/products/22.json
 ###
 POST http://localhost:3000/products.json
 Content-Type: application/json
+Authorization: Bearer {{admin}}
 
 {
-  "name": "Shinguards_1",
+  "name": "Shinguards_50",
   "price": 20,
   "image_url": "test_url",
   "description": "Protection for your shins. Required by refs everywhere.. unfortunately",
@@ -21,13 +26,13 @@ Content-Type: application/json
 
 
 ###
-PATCH http://localhost:3000/products/16.json
+PATCH http://localhost:3000/products/26.json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjAxNTY2Mjd9.A7amLWzYCssJBz_wCtCaTIoZX-C6WTrOcMj9OVIpbis
 
 {
-  "name": "Shinguards_1",
-  "price": 20,
-  "image_url": "test_url",
+  "name": "Shinguards_2",
+  "price": 40,
   "description": "Protection for your shins. Required by refs everywhere.. unfortunately"
 }
 
@@ -48,6 +53,7 @@ GET HTTP://localhost:3000/suppliers/2.json
 ### add supplier
 POST http://localhost:3000/suppliers.json
 Content-Type: application/json
+Authorization: Bearer {{admin}}
 
 {
   "name": "",
@@ -68,8 +74,8 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/suppliers/3.json
-
+DELETE http://localhost:3000/suppliers/6.json
+Authorization: Bearer {{admin}}
 
 ###
 # User Add Image:
@@ -123,5 +129,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyN
 
 
 ### Orders Show
-get http://localhost:3000/orders/5.json
+get http://localhost:3000/orders/2.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA

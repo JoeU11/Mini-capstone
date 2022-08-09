@@ -1,4 +1,6 @@
 class SuppliersController < ApplicationController
+  before_action :authenticate_admin, except:[:index, :show]
+
   def index
     @suppliers = Supplier.all
     render template: "suppliers/index"
@@ -26,5 +28,7 @@ class SuppliersController < ApplicationController
 
   def destroy
     @supplier = Supplier.find_by(id: params[:id])
+    @supplier.destroy
+    render json: {message: "It's gone"}
   end
 end

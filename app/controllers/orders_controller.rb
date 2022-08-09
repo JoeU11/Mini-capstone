@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     if current_user.id == order.user_id
       render json: order.as_json
     else
-      render json: {message: "Error. You may only view your orders"}
+      render json: {message: "Error. You may only view your orders"}, status: :unauthorized
     end
   end
 end

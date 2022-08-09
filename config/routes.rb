@@ -5,40 +5,40 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # products
-  get "/products" => "products#index"
+  get "/products" => "products#index" #everyone
 
-  get "/products/:id" => "products#show"
+  get "/products/:id" => "products#show" #everyone
 
-  post "/products" => "products#create"
+  post "/products" => "products#create" #admin
 
-  patch "/products/:id" => "products#update"
+  patch "/products/:id" => "products#update" #admin
 
-  delete "/products/:id" => "products#destroy"
+  delete "/products/:id" => "products#destroy" #admin
 
   # Suppliers
-  get "/suppliers" => "suppliers#index"
+  get "/suppliers" => "suppliers#index" #everyone
 
-  get "/suppliers/:id" => "suppliers#show"
+  get "/suppliers/:id" => "suppliers#show" #everyone
 
-  post "/suppliers" => "suppliers#create"
+  post "/suppliers" => "suppliers#create" #admin
 
-  patch "/suppliers/:id" => "suppliers#update"
+  patch "/suppliers/:id" => "suppliers#update" #admin
 
-  delete "/suppliers/:id" => "suppliers#destroy"
+  delete "/suppliers/:id" => "suppliers#destroy" #admin
 
   # Images
-  post "/images" => "images#create"
+  post "/images" => "images#create" #admin
 
   # Users
-  post "/users" => "users#create"
+  post "/users" => "users#create" #everyone
 
   #login
-  post "/sessions" => "sessions#create"
+  post "/sessions" => "sessions#create" #everyone
 
   #create order
-  post "/orders" => "orders#create"
+  post "/orders" => "orders#create" #logged in
 
-  get "/orders" => "orders#index"
+  get "/orders" => "orders#index" #logged in
 
-  get "/orders/:id" => "orders#show"
+  get "/orders/:id" => "orders#show" #logged in
 end

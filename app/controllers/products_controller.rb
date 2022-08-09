@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController  
+  before_action :authenticate_admin, only:[:create, :update, :destroy]
   def index
     @products = Product.all   
     render template: "products/index"
@@ -27,7 +28,6 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: params[:id])
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
-    @product.image_url = params[:image_url] || @product.image_url
     @product.description = params[:description] || @product.description
     if @product.save 
       render template: "products/show"
