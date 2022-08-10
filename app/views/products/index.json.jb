@@ -8,5 +8,6 @@
     supplier: product.supplier,
     id: product.id,
     # url: product_url(product, format: :json)
+    category: product.categories
   }.compact
 end

@@ -1,7 +1,12 @@
 class ProductsController < ApplicationController  
   before_action :authenticate_admin, only:[:create, :update, :destroy]
   def index
-    @products = Product.all   
+    if params[:category]
+      category = params[:category]
+      @products = category.products
+    else
+      @products = Product.all   
+    end
     render template: "products/index"
     # render json: products.as_json(methods: [:friendly_created_at, :is_discounted?, :tax, :total])
   end

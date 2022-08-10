@@ -8,7 +8,7 @@ GET HTTP://localhost:3000/products.json
 
 
 ###
-GET HTTP://localhost:3000/products/22.json
+GET HTTP://localhost:3000/products/2.json
 
 
 ###
