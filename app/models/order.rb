@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
   belongs_to :user
-  belongs_to :product # not sure about this one. THink a table can be linked multiple times. 
+  has_many :carted_products
+  has_many :products, through: :carted_products
 end

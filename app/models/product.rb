@@ -3,6 +3,8 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :category_products
   has_many :categories, through: :category_products
+  has_many :carted_products
+  # has_many :orders, through: :carted_products # don't think this is needed. Uncomment if necessary
 
   validates :name, presence: true
   validates :name, uniqueness: true
@@ -12,6 +14,7 @@ class Product < ApplicationRecord
   # validate :description_length
   validates :description, presence: true
   validates :description, length: { in: 10..500}
+
 
   # def greater_than_zero
   #   if price <= 0

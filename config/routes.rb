@@ -41,4 +41,8 @@ Rails.application.routes.draw do
   get "/orders" => "orders#index" #logged in
 
   get "/orders/:id" => "orders#show" #logged in
+
+  ############ Carted Products
+
+  get "/carted_products" => "carted_products#index"
 end

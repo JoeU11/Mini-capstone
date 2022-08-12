@@ -1,5 +1,4 @@
-#just for testing locally. Front end replaces entirely. 
-@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjAxNTY2Mjd9.A7amLWzYCssJBz_wCtCaTIoZX-C6WTrOcMj9OVIpbis
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjA0MDgwMTd9.4EbDQEH9aKUkI9-OPj2lLnMwZEqiQGhR5gyOs0MXjhU
 @user = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTgxOTl9.AEA0eSFdAq22q6pukr9bfc_-zigK0CBgy6fFMCUipqY
 
 
@@ -103,7 +102,7 @@ post http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test_email",
+  "email": "bill@bill.com",
   "password": "password"
 }
 
@@ -131,3 +130,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyN
 ### Orders Show
 get http://localhost:3000/orders/2.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
+
+
+############ Carted Products
+get http://localhost:3000/carted_products.json
+Authorization: Bearer {{admin}}
