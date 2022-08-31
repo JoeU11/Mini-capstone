@@ -1,0 +1,11 @@
+@carted_products.map do |carted_product|
+  {
+    id: carted_product.id,
+    product: carted_product.product_name,
+    price: carted_product.product.price,
+    description: carted_product.product_description,
+    quantity: carted_product.quantity
+
+  }
+  # won't work for subtotal. subtotal will be shown once, not per carted_product.  
+end

@@ -1,4 +1,4 @@
-@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjA0MDgwMTd9.4EbDQEH9aKUkI9-OPj2lLnMwZEqiQGhR5gyOs0MXjhU
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNDkwNzV9.zbGllQjHIUYzpmecA-qdarH8yFDJR70J7FcTvFj0_Qc
 @user = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTgxOTl9.AEA0eSFdAq22q6pukr9bfc_-zigK0CBgy6fFMCUipqY
 
 
@@ -111,15 +111,15 @@ GET HTTP://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjAwNjM0MjF9.oTWYmNJolUcwSTGH2BMchSn661Tjq1WzSH4KfAP3y0Y
 
 
-### Create order
-post http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
-Content-Type: application/json
+# ### Create order   ## replaced with creation of carts
+# post http://localhost:3000/orders.json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
+# Content-Type: application/json
 
-{
-  "product_id": 3,
-  "quantity": 3
-}
+# {
+#   "product_id": 3,
+#   "quantity": 3
+# }
 
 
 ### Orders Index
@@ -132,6 +132,39 @@ get http://localhost:3000/orders/2.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjAxNTIyNDd9.DUN2-OY0Yuvl-gPLLlfcCWuBRM569MgpKO9PWBMwxfA
 
 
+### Order create (new)
+post http://localhost:3000/orders.json
+Authorization: Bearer {{admin}}
+
 ############ Carted Products
 get http://localhost:3000/carted_products.json
 Authorization: Bearer {{admin}}
+
+###
+post http://localhost:3000/carted_products.json
+Content-Type: application/json
+Authorization: Bearer {{admin}}
+
+{
+  "product_id": 6,
+  "quantity": 4
+}
+
+###
+delete http://localhost:3000/carted_products.json
+Authorization: Bearer {{admin}}
+Content-Type: application/json
+
+{
+  "delete_all": true
+}
+
+
+### change quantity
+patch http://localhost:3000/carted_products/4.json
+Authorization: Bearer {{admin}}
+Content-Type: application/json
+
+{
+  "quantity": 7
+}

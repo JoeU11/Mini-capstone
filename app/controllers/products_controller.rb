@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
       @products = Product.all   
     end
     render template: "products/index"
+    # render json: {message: "will this work??"}
     # render json: products.as_json(methods: [:friendly_created_at, :is_discounted?, :tax, :total])
   end
 

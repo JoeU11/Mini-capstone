@@ -45,4 +45,12 @@ Rails.application.routes.draw do
   ############ Carted Products
 
   get "/carted_products" => "carted_products#index"
+
+  post "/carted_products" => "carted_products#create"
+
+  delete "/carted_products/:id" => "carted_products#destroy"
+
+  delete "/carted_products" => "carted_products#destroy" # not sure if this is standard. Delete all should work with either delete route
+
+  patch "/carted_products/:id" => "carted_products#update"
 end
